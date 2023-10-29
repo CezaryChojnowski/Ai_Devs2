@@ -6,7 +6,7 @@ var Auth = /** @class */ (function () {
     }
     Auth.authorize = function (taskName) {
         var authRequest = {
-            apikey: process.env.API_KEY
+            apikey: process.env.AI_DEVS_API_KEY
         };
         return fetch('https://zadania.aidevs.pl/token/' + taskName, {
             method: 'POST',

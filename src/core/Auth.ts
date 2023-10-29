@@ -2,9 +2,9 @@ import {AuthRequest} from "../model/AuthRequest";
 import 'dotenv/config'
 
 class Auth {
-    static authorize<AuthResponse>(taskName: string) : Promise<AuthResponse>{
+    static authorize(taskName: string){
         const authRequest: AuthRequest = {
-            apikey: process.env.API_KEY
+            apikey: process.env.AI_DEVS_API_KEY
         };
         return fetch('https://zadania.aidevs.pl/token/' + taskName, {
             method: 'POST',
@@ -13,7 +13,7 @@ class Auth {
             },
             body: JSON.stringify(authRequest)
         }).then(data => {
-            return data.json() as AuthResponse;
+            return data.json();
         }).catch(error => {
             console.log(error);
             return error;

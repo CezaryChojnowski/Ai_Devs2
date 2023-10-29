@@ -1,3 +1,3 @@
 export default interface AnswerRequest {
-    answer: string;
+    answer: Object;
 }
