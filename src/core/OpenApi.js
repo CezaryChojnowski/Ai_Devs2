@@ -19,6 +19,21 @@ var OpenApi = /** @class */ (function () {
             return error;
         });
     };
+    OpenApi.completions = function (completionsRequest) {
+        return fetch('https://api.openai.com/v1/chat/completions', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+                Authorization: "Bearer " + process.env.OPENAI_API_KEY,
+            },
+            body: JSON.stringify(completionsRequest)
+        }).then(function (data) {
+            return data.json();
+        }).catch(function (error) {
+            console.log(error);
+            return error;
+        });
+    };
     return OpenApi;
 }());
 exports.default = OpenApi;

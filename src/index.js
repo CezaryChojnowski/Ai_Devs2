@@ -1,8 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var TaskModeration_1 = require("./tasks/TaskModeration");
+var TaskChooserConfig_1 = require("./TaskChooserConfig");
+var taskChooserConfig = new TaskChooserConfig_1.default;
 function solveTask() {
-    var taskModeration = new TaskModeration_1.default();
-    taskModeration.solve().then(function (response) { return console.log(response); });
+    var taskDirection = process.argv[2];
+    var tasksConfig = taskChooserConfig.preparteTasksConfig();
+    var solver = tasksConfig.get(taskDirection);
+    if (solver != undefined) {
+        solver.solve();
+    }
 }
 solveTask();
