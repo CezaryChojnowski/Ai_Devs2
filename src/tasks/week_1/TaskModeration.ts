@@ -2,7 +2,7 @@ import Auth from "../core/Auth";
 import Task from "../core/Task";
 import AuthResponse from "../model/AuthResponse";
 import TaskResponse from "../model/TaskResponse";
-import TaskSolver from "./TaskSolver";
+import TaskSolver from "../TaskSolver";
 import OpenApi from "../core/OpenApi";
 import ModerationResponse from "../model/moderation/ModerationResponse";
 import AnswerRequest from "../model/AnswerRequest";

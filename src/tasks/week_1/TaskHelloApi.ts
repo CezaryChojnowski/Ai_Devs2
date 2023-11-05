@@ -4,7 +4,7 @@ import Answer from "../core/Answer";
 import AuthResponse from "../model/AuthResponse";
 import TaskResponse from "../model/TaskResponse";
 import AnswerRequest from "../model/AnswerRequest";
-import TaskSolver from "./TaskSolver";
+import TaskSolver from "../TaskSolver";
 
 const TASK_NAME = "helloapi";
 class TaskHelloApi implements TaskSolver {

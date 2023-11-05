@@ -1,14 +1,14 @@
-import Auth from "../core/Auth";
-import Task from "../core/Task";
-import AuthResponse from "../model/AuthResponse";
-import TaskResponse from "../model/TaskResponse";
-import TaskSolver from "./TaskSolver";
-import CompletionsRequest from "../model/completions/CompletionsRequest";
-import Message from "../model/completions/Message";
-import Answer from "../core/Answer";
-import OpenApi from "../core/OpenApi";
-import CompletionsResponse from "../model/completions/CompletionsResponse";
-import AnswerRequest from "../model/AnswerRequest";
+import Auth from "../../core/Auth"
+import Task from "../../core/Task";
+import AuthResponse from "../../model/AuthResponse";
+import TaskResponse from "../../model/TaskResponse";
+import TaskSolver from "../TaskSolver";
+import CompletionsRequest from "../../model/completions/CompletionsRequest";
+import Message from "../../model/completions/Message";
+import Answer from "../../core/Answer";
+import OpenApi from "../../core/OpenApi";
+import CompletionsResponse from "../../model/completions/CompletionsResponse";
+import AnswerRequest from "../../model/AnswerRequest";
 const TASK_NAME = "blogger";
 
 class TaskBlogger implements TaskSolver {

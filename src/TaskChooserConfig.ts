@@ -1,7 +1,7 @@
 import TaskDirections from "./enum/TaskDirections";
-import TaskBlogger from "./tasks/TaskBlogger";
-import TaskHelloApi from "./tasks/TaskHelloApi";
-import TaskModeration from "./tasks/TaskModeration";
+import TaskBlogger from "./tasks/week_1/TaskBlogger";
+import TaskHelloApi from "./tasks/week_1/TaskHelloApi";
+import TaskModeration from "./tasks/week_1/TaskModeration";
 import TaskSolver from "./tasks/TaskSolver";
 
 class TaskChooserConfig{
