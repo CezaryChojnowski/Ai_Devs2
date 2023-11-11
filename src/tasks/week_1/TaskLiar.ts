@@ -6,15 +6,16 @@ import TaskResponse from "../../model/TaskResponse";
 import AnswerRequest from "../../model/AnswerRequest";
 import TaskSolver from "../TaskSolver";
 
-const TASK_NAME = "helloapi";
-class TaskHelloApi implements TaskSolver {
+const TASK_NAME = "liar";
+class TaskLiar implements TaskSolver {
     async solve() {
         const authResponse = await Auth.authorize(TASK_NAME) as AuthResponse;
         const taskResponse = await Task.getTask(authResponse.token) as TaskResponse
-        const answerRequest: AnswerRequest = {
-            answer: taskResponse.cookie
-        };
-        await Answer.sendAnswer(answerRequest, authResponse.token)
+        console.log(taskResponse)
+        // const answerRequest: AnswerRequest = {
+        //     answer: taskResponse.cookie
+        // };
+        // await Answer.sendAnswer(answerRequest, authResponse.token)
     }
 }
-export default TaskHelloApi;
+export default TaskLiar;

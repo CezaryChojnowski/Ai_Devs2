@@ -133,7 +133,7 @@ dist
 .pnp.*
 
 # js file
-.js
+*.js
 
 # idea
 .idea

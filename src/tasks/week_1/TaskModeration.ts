@@ -1,13 +1,13 @@
-import Auth from "../core/Auth";
-import Task from "../core/Task";
-import AuthResponse from "../model/AuthResponse";
-import TaskResponse from "../model/TaskResponse";
+import Auth from "../../core/Auth";
+import Task from "../..//core/Task";
+import AuthResponse from "../../model/AuthResponse";
+import TaskResponse from "../../model/TaskResponse";
 import TaskSolver from "../TaskSolver";
-import OpenApi from "../core/OpenApi";
-import ModerationResponse from "../model/moderation/ModerationResponse";
-import AnswerRequest from "../model/AnswerRequest";
-import Answer from "../core/Answer";
-import ModerationRequest from "../model/moderation/ModerationRequest";
+import OpenApi from "../../core/OpenApi";
+import ModerationResponse from "../../model/moderation/ModerationResponse";
+import AnswerRequest from "../../model/AnswerRequest";
+import Answer from "../../core/Answer";
+import ModerationRequest from "../../model/moderation/ModerationRequest";
 
 const TASK_NAME = "moderation";
 
