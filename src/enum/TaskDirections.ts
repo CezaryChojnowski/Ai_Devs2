@@ -1,4 +1,4 @@
-enum TaskDirections{
+export enum TaskDirections{
     HELLO_API = "helloapi",
     BLOGGER = "blogger",
     MODERATION = "moderation",

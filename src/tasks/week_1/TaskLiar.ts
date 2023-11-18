@@ -5,8 +5,10 @@ import AuthResponse from "../../model/AuthResponse";
 import TaskResponse from "../../model/TaskResponse";
 import AnswerRequest from "../../model/AnswerRequest";
 import TaskSolver from "../TaskSolver";
+import TaskDirections from "../../enum/TaskDirections";
 
-const TASK_NAME = "liar";
+const TASK_NAME = TaskDirections.LIAR
+
 class TaskLiar implements TaskSolver {
     async solve() {
         let question = "What is capital of Poland?"

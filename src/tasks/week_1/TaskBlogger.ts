@@ -9,7 +9,11 @@ import Answer from "../../core/Answer";
 import OpenApi from "../../core/OpenApi";
 import CompletionsResponse from "../../model/completions/CompletionsResponse";
 import AnswerRequest from "../../model/AnswerRequest";
-const TASK_NAME = "blogger";
+import { ModelConstants } from '../../model/conts/ModelConstants'
+import TaskDirections from "../../enum/TaskDirections";
+import { RoleConstants } from '../../model/conts/RoleConstants'
+
+const TASK_NAME = TaskDirections.BLOGGER;
 
 class TaskBlogger implements TaskSolver {
     async solve() {
@@ -23,15 +27,15 @@ class TaskBlogger implements TaskSolver {
             Every one chapter should have maximum 50 words.
             example\`\`\`
             ['chapter 1','chapter 2','chapter 3','chapter 4]`,
-            role:"system"
+            role: RoleConstants.SYSTEM
         },
         {
             content: taskResponse.blog.join(",\n"),
-            role:"user"
+            role: RoleConstants.USER
         }];
         const completionsRequest: CompletionsRequest = {
             messages: messages,
-            model:"gpt-3.5-turbo",
+            model: ModelConstants.GPT_3_5_TURBO,
             max_tokens:3000
         };
         const completionsResponse = await OpenApi.completions(completionsRequest) as CompletionsResponse;

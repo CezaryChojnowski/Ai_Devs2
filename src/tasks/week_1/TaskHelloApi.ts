@@ -5,8 +5,10 @@ import AuthResponse from "../../model/AuthResponse";
 import TaskResponse from "../../model/TaskResponse";
 import AnswerRequest from "../../model/AnswerRequest";
 import TaskSolver from "../TaskSolver";
+import TaskDirections from "../../enum/TaskDirections";
 
-const TASK_NAME = "helloapi";
+const TASK_NAME = TaskDirections.HELLO_API;
+
 class TaskHelloApi implements TaskSolver {
     async solve() {
         const authResponse = await Auth.authorize(TASK_NAME) as AuthResponse;

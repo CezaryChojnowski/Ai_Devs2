@@ -8,8 +8,9 @@ import ModerationResponse from "../../model/moderation/ModerationResponse";
 import AnswerRequest from "../../model/AnswerRequest";
 import Answer from "../../core/Answer";
 import ModerationRequest from "../../model/moderation/ModerationRequest";
+import TaskDirections from "../../enum/TaskDirections";
 
-const TASK_NAME = "moderation";
+const TASK_NAME = TaskDirections.MODERATION;
 
 class TaskModeration implements TaskSolver {
     async solve() {
