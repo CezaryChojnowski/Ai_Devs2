@@ -2,6 +2,7 @@ enum TaskDirections{
     HELLO_API = "helloapi",
     BLOGGER = "blogger",
     MODERATION = "moderation",
-    LIAR = "liar"
+    LIAR = "liar",
+    INPROMPT = "inprompt"
 }
 export default TaskDirections;
