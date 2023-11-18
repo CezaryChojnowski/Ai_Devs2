@@ -32,5 +32,21 @@ class OpenApi {
             return error;
         })
     }
+
+    static embeddings(embeddingsRequest: Object) {
+        return fetch('https://api.openai.com/v1/embeddings', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+                Authorization: "Bearer " + process.env.OPENAI_API_KEY,
+            },
+            body: JSON.stringify(embeddingsRequest)
+        }).then(data => {
+            return data.json();
+        }).catch(error => {
+            console.log(error);
+            return error;
+        })
+    }
 }
 export default OpenApi

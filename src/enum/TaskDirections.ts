@@ -3,6 +3,7 @@ enum TaskDirections{
     BLOGGER = "blogger",
     MODERATION = "moderation",
     LIAR = "liar",
-    INPROMPT = "inprompt"
+    INPROMPT = "inprompt",
+    EMBEDDING = "embedding"
 }
 export default TaskDirections;
