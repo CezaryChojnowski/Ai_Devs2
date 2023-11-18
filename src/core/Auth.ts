@@ -1,5 +1,5 @@
 import {AuthRequest} from "../model/AuthRequest";
-import 'dotenv/config'
+import 'dotenv/config';
 
 class Auth {
     static authorize(taskName: string){

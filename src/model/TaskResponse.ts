@@ -5,4 +5,5 @@ export default interface TaskResponse {
     input?: any;
     blog?: any;
     question?: string;
+    answer?: string;
 }
