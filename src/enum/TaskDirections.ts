@@ -5,6 +5,7 @@ export enum TaskDirections{
     LIAR = "liar",
     INPROMPT = "inprompt",
     EMBEDDING = "embedding",
-    WHISPER = "whisper"
+    WHISPER = "whisper",
+    FUNCTIONS = "functions"
 }
 export default TaskDirections;
