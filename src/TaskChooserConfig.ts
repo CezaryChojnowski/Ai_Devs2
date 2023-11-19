@@ -9,6 +9,7 @@ import TaskEmbedding from "./tasks/week_2/TaskEmbedding";
 import TaskWhisper from "./tasks/week_2/TaskWhisper";
 import TaskFunctions from "./tasks/week_2/TaskFunctions";
 import TaskRodo from "./tasks/week_3/TaskRodo";
+import TaskScraper from "./tasks/week_3/TaskScraper";
 
 class TaskChooserConfig{
     preparteTasksConfig(){
@@ -21,7 +22,8 @@ class TaskChooserConfig{
             [TaskDirections.EMBEDDING, new TaskEmbedding],
             [TaskDirections.WHISPER, new TaskWhisper],
             [TaskDirections.FUNCTIONS, new TaskFunctions],
-            [TaskDirections.RODO, new TaskRodo]
+            [TaskDirections.RODO, new TaskRodo],
+            [TaskDirections.SCRAPER, new TaskScraper]
         ]);
     }
 }

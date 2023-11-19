@@ -7,6 +7,7 @@ export enum TaskDirections{
     EMBEDDING = "embedding",
     WHISPER = "whisper",
     FUNCTIONS = "functions",
-    RODO = "rodo"
+    RODO = "rodo",
+    SCRAPER = "scraper"
 }
 export default TaskDirections;
