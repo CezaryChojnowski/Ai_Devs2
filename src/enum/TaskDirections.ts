@@ -6,6 +6,7 @@ export enum TaskDirections{
     INPROMPT = "inprompt",
     EMBEDDING = "embedding",
     WHISPER = "whisper",
-    FUNCTIONS = "functions"
+    FUNCTIONS = "functions",
+    RODO = "rodo"
 }
 export default TaskDirections;
