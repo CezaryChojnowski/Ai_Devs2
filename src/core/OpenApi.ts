@@ -1,4 +1,6 @@
 import 'dotenv/config'
+import { readFileSync } from 'fs';
+
 class OpenApi {
 
     static moderation(moderationRequest: Object) {
@@ -41,6 +43,27 @@ class OpenApi {
                 Authorization: "Bearer " + process.env.OPENAI_API_KEY,
             },
             body: JSON.stringify(embeddingsRequest)
+        }).then(data => {
+            return data.json();
+        }).catch(error => {
+            console.log(error);
+            return error;
+        })
+    }
+
+    static transcriptions(pathToFile: string, model: string) {
+        const formData = new FormData();
+        formData.append('file', pathToFile);
+        formData.append('model', model);
+        formData.append('response_format', 'text');
+        console.log(formData)
+        return fetch('https://api.openai.com/v1/audio/transcriptions', {
+            method: 'POST',
+            headers: {
+                Authorization: "Bearer " + process.env.OPENAI_API_KEY,
+                'Content-Type': 'multipart/form-data',
+            },
+            body: formData
         }).then(data => {
             return data.json();
         }).catch(error => {

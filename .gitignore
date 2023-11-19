@@ -137,3 +137,6 @@ dist
 
 # idea
 .idea
+
+#mp3 files
+*.mp3

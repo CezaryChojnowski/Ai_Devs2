@@ -6,6 +6,7 @@ import TaskSolver from "./tasks/TaskSolver";
 import TaskLiar from "./tasks/week_1/TaskLiar";
 import TaskInprompt from "./tasks/week_2/TaskInprompt";
 import TaskEmbedding from "./tasks/week_2/TaskEmbedding";
+import TaskWhisper from "./tasks/week_2/TaskWhisper";
 
 class TaskChooserConfig{
     preparteTasksConfig(){
@@ -15,7 +16,8 @@ class TaskChooserConfig{
             [TaskDirections.MODERATION, new TaskModeration],
             [TaskDirections.LIAR, new TaskLiar],
             [TaskDirections.INPROMPT, new TaskInprompt],
-            [TaskDirections.EMBEDDING, new TaskEmbedding]
+            [TaskDirections.EMBEDDING, new TaskEmbedding],
+            [TaskDirections.WHISPER, new TaskWhisper]
         ]);
     }
 }
