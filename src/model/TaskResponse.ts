@@ -8,4 +8,5 @@ export default interface TaskResponse {
     answer?: string;
     'database #1'?:string;
     'database #2'?:string;
+    hint?: string;
 }
