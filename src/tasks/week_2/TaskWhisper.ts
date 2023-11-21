@@ -11,7 +11,6 @@ import { ModelConstants } from '../../model/conts/ModelConstants'
 import TaskDirections from "../../enum/TaskDirections";
 
 const TASK_NAME = TaskDirections.WHISPER;
-const urlRegex = /(https?|ftp):\/\/[^\s/$.?#].[^\s]*$/i;
 
 class TaskWhisper implements TaskSolver {
     async solve() {
