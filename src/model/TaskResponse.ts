@@ -9,4 +9,5 @@ export default interface TaskResponse {
     'database #1'?:string;
     'database #2'?:string;
     hint?: string;
+    data?: string;
 }

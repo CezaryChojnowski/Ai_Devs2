@@ -12,6 +12,7 @@ import TaskRodo from "./tasks/week_3/TaskRodo";
 import TaskScraper from "./tasks/week_3/TaskScraper";
 import TaskKnowledge from "./tasks/week_4/TaskKnowledge";
 import TaskWhoami from "./tasks/week_3/TaskWhoami";
+import TaskPeople from "./tasks/week_3/TaskPeople";
 
 class TaskChooserConfig{
     preparteTasksConfig(){
@@ -27,7 +28,8 @@ class TaskChooserConfig{
             [TaskDirections.RODO, new TaskRodo],
             [TaskDirections.SCRAPER, new TaskScraper],
             [TaskDirections.KNOWLEDGE, new TaskKnowledge()],
-            [TaskDirections.WHOAMI, new TaskWhoami()]
+            [TaskDirections.WHOAMI, new TaskWhoami()],
+            [TaskDirections.PEOPLE, new TaskPeople()]
         ]);
     }
 }

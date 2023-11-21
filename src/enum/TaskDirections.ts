@@ -10,6 +10,7 @@ export enum TaskDirections{
     RODO = "rodo",
     SCRAPER = "scraper",
     KNOWLEDGE = "knowledge",
-    WHOAMI = "whoami"
+    WHOAMI = "whoami",
+    PEOPLE = "people"
 }
 export default TaskDirections;
