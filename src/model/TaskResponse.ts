@@ -6,4 +6,6 @@ export default interface TaskResponse {
     blog?: any;
     question?: string;
     answer?: string;
+    'database #1'?:string;
+    'database #2'?:string;
 }
