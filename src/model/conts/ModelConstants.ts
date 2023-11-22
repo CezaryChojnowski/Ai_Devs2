@@ -3,4 +3,5 @@ export class ModelConstants {
     static readonly TEXT_EMBEDDING_ADA_202: string = "text-embedding-ada-002"
     static readonly WHISPER: string = "whisper-1"
     static readonly GPT_4: string = "gpt-4"
+    static readonly GPT_4_VISION_PREVIEW = "gpt-4-vision-preview"
   }

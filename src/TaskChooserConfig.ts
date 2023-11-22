@@ -15,6 +15,7 @@ import TaskWhoami from "./tasks/week_3/TaskWhoami";
 import TaskPeople from "./tasks/week_3/TaskPeople";
 import TaskTools from "./tasks/week_4/TaskTools";
 import TaskMeme from "./tasks/week_4/TaskMeme";
+import TaskGnome from "./tasks/week_4/TaskGnome";
 
 class TaskChooserConfig{
     preparteTasksConfig(){
@@ -33,7 +34,8 @@ class TaskChooserConfig{
             [TaskDirections.WHOAMI, new TaskWhoami()],
             [TaskDirections.PEOPLE, new TaskPeople()],
             [TaskDirections.TOOLS, new TaskTools()],
-            [TaskDirections.MEME, new TaskMeme()]
+            [TaskDirections.MEME, new TaskMeme()],
+            [TaskDirections.GNOME, new TaskGnome()]
         ]);
     }
 }

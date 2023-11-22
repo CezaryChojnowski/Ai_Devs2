@@ -14,4 +14,5 @@ export default interface TaskResponse {
     'example fo Calendar'?:string;
     text?:string
     image?:string
+    url?:string
 }

@@ -13,6 +13,7 @@ export enum TaskDirections{
     WHOAMI = "whoami",
     PEOPLE = "people",
     TOOLS ="tools",
-    MEME = "meme"
+    MEME = "meme",
+    GNOME = "gnome"
 }
 export default TaskDirections;
