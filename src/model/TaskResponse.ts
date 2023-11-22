@@ -10,6 +10,8 @@ export default interface TaskResponse {
     'database #2'?:string;
     hint?: string;
     data?: string;
-    'example for Todo':string;
-    'example fo Calendar':string;
+    'example for Todo'?:string;
+    'example fo Calendar'?:string;
+    text?:string
+    image?:string
 }

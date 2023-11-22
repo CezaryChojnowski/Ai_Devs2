@@ -13,7 +13,8 @@ import TaskScraper from "./tasks/week_3/TaskScraper";
 import TaskKnowledge from "./tasks/week_4/TaskKnowledge";
 import TaskWhoami from "./tasks/week_3/TaskWhoami";
 import TaskPeople from "./tasks/week_3/TaskPeople";
-import TaskTools from "./tasks/week_3/TaskTools";
+import TaskTools from "./tasks/week_4/TaskTools";
+import TaskMeme from "./tasks/week_4/TaskMeme";
 
 class TaskChooserConfig{
     preparteTasksConfig(){
@@ -31,7 +32,8 @@ class TaskChooserConfig{
             [TaskDirections.KNOWLEDGE, new TaskKnowledge()],
             [TaskDirections.WHOAMI, new TaskWhoami()],
             [TaskDirections.PEOPLE, new TaskPeople()],
-            [TaskDirections.TOOLS, new TaskTools()]
+            [TaskDirections.TOOLS, new TaskTools()],
+            [TaskDirections.MEME, new TaskMeme()]
         ]);
     }
 }
