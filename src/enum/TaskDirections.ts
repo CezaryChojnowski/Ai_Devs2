@@ -11,6 +11,7 @@ export enum TaskDirections{
     SCRAPER = "scraper",
     KNOWLEDGE = "knowledge",
     WHOAMI = "whoami",
-    PEOPLE = "people"
+    PEOPLE = "people",
+    TOOLS ="tools"
 }
 export default TaskDirections;
