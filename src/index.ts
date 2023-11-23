@@ -42,7 +42,9 @@ app.post("/", async (req: Request<{}, {}, OwnApiRequest>, res: Response<OwnApiRe
     try {
       console.log(completionsRequest)
         const completionsResponse = await OpenApi.completions(completionsRequest) as CompletionsResponse;
-      
+        console.log(completionsResponse.choices[0])
+        console.log(completionsResponse.choices[0].message)
+        console.log(completionsResponse.choices[0].message.content)
         if (completionsResponse.choices && completionsResponse.choices.length > 0) {
           const answer = completionsResponse.choices[0].message.content;
       
