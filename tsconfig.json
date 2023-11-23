@@ -2,7 +2,7 @@
   "compilerOptions": {
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "target" : "ES3",
+    "target" : "ES2015",
     "sourceMap": true,
     "outDir": "dist"
   },

@@ -14,6 +14,7 @@ export enum TaskDirections{
     PEOPLE = "people",
     TOOLS ="tools",
     MEME = "meme",
-    GNOME = "gnome"
+    GNOME = "gnome",
+    OWNAPI = "ownapi"
 }
 export default TaskDirections;
