@@ -20,9 +20,8 @@ app.listen(PORT, () => {
   });
 
 app.post("/", async (req: Request<{}, {}, OwnApiRequest>, res: Response<OwnApiResponse>) => {
-    console.log(req)
     const questions = req.body.question.join(" ");
-
+    console.log(questions)
     const messages: Message[] = [
         {
             content: `You answer questions`,
@@ -41,6 +40,7 @@ app.post("/", async (req: Request<{}, {}, OwnApiRequest>, res: Response<OwnApiRe
     };
 
     try {
+      console.log(completionsRequest)
         const completionsResponse = await OpenApi.completions(completionsRequest) as CompletionsResponse;
       
         if (completionsResponse.choices && completionsResponse.choices.length > 0) {
@@ -49,7 +49,7 @@ app.post("/", async (req: Request<{}, {}, OwnApiRequest>, res: Response<OwnApiRe
           const apiResponse: OwnApiResponse = {
             reply: answer,
           };
-      
+          console.log(apiResponse)
           res.json(apiResponse);
         } else {
           res.status(404).json({ error: 'No choices available' });
