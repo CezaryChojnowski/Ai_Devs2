@@ -7,8 +7,8 @@ import OwnApiResponse from "./model/ownapi/OwnApiResponse";
 import {config} from "dotenv"
 import * as express from 'express';
 import { Request, Response } from 'express';
-import { RoleConstants } from "../src/model/conts/RoleConstants";
-import { ModelConstants } from "../src/model/conts/ModelConstants";
+import { RoleConstants } from "./model/conts/RoleConstants";
+import { ModelConstants } from "./model/conts/ModelConstants";
 import * as https from 'https';
 import * as fs from 'fs';
 
