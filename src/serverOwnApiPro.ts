@@ -43,12 +43,19 @@ class ConversationHandler {
     console.log(`Received question in conversation ${conversationId}: ${question}`);
 
     const conversationMemory = this.conversationState[conversationId] || {};
+    const conversationMemoryValues = Object.values(conversationMemory);
 
+    const stringValuesArray = conversationMemoryValues.map(memory => {
+        return JSON.stringify(memory);
+        });
+    const resultString = stringValuesArray.join(', ');
+        console.log(resultString)
+    
     const messages: Message[] = [
       {
         content: `You answer questions,
         context\`\`\
-        Model knowledge: ${conversationMemory}`,
+        Model knowledge: ${resultString}`,
         role: RoleConstants.SYSTEM
       },
       {
@@ -56,7 +63,8 @@ class ConversationHandler {
         role: RoleConstants.USER
       }
     ];
-
+    console.log("Message")
+    console.log(messages)
     const completionsRequest: CompletionsRequest = {
       messages: messages,
       model: ModelConstants.GPT_4,
@@ -67,7 +75,7 @@ class ConversationHandler {
       const completionsResponse = await OpenApi.completions(completionsRequest) as CompletionsResponse;
       if (completionsResponse.choices && completionsResponse.choices.length > 0) {
         const answer = completionsResponse.choices[0].message.content;
-
+        console.log("Answer: " + answer)
         conversationMemory[question] = answer;
         this.conversationState[conversationId] = conversationMemory;
 
