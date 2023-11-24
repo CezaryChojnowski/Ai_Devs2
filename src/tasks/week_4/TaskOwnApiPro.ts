@@ -19,13 +19,12 @@ import AnswerResponse from "../../model/AnswerResponse";
 
 const TASK_NAME = TaskDirections.OWNAPI;
 
-class TaskOwnApi implements TaskSolver {
+class TaskOwnApiPro implements TaskSolver {
     async solve() {
         const authResponse = await Auth.authorize(TASK_NAME) as AuthResponse;
         const taskResponse = await Task.getTask(authResponse.token) as TaskResponse
         const answerRequest: AnswerRequest = { answer: "https://maluch2.mikr.us:40062/" };
         await Answer.sendAnswer(answerRequest, authResponse.token) as AnswerResponse;
     }
-  }
-
-export default TaskOwnApi;
+}
+export default TaskOwnApiPro;
