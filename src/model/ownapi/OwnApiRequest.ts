@@ -1,3 +1,3 @@
 export default interface OwnApiRequest {
-    question: string[];
+    question: string;
 }
