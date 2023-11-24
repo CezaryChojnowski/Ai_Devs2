@@ -9,13 +9,21 @@ import * as express from 'express';
 import { Request, Response } from 'express';
 import { RoleConstants } from "../src/model/conts/RoleConstants";
 import { ModelConstants } from "../src/model/conts/ModelConstants";
+import * as https from 'https';
+import * as fs from 'fs';
 
 config()
 const app = express();
 app.use(express.json());
 const PORT = process.env.PORT || 40062;
 
-app.listen(PORT, () => {
+const privateKey = fs.readFileSync('klucz-prywatny.pem', 'utf8');
+const certificate = fs.readFileSync('certyfikat.pem', 'utf8');
+const credentials = { key: privateKey, cert: certificate };
+
+const httpsServer = https.createServer(credentials, app);
+
+httpsServer.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
   });
 
