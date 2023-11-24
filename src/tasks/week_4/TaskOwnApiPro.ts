@@ -17,14 +17,15 @@ import AnswerRequest from "../../model/AnswerRequest";
 import Answer from "../../core/Answer";
 import AnswerResponse from "../../model/AnswerResponse";
 
-const TASK_NAME = TaskDirections.OWNAPI;
+const TASK_NAME = TaskDirections.OWNAPIPRO;
 
 class TaskOwnApiPro implements TaskSolver {
     async solve() {
         const authResponse = await Auth.authorize(TASK_NAME) as AuthResponse;
         const taskResponse = await Task.getTask(authResponse.token) as TaskResponse
         const answerRequest: AnswerRequest = { answer: "https://maluch2.mikr.us:40062/" };
-        await Answer.sendAnswer(answerRequest, authResponse.token) as AnswerResponse;
+        let answer = await Answer.sendAnswer(answerRequest, authResponse.token) as AnswerResponse;
+        console.log(answer)
     }
 }
 export default TaskOwnApiPro;

@@ -46,7 +46,9 @@ class ConversationHandler {
 
     const messages: Message[] = [
       {
-        content: `You answer questions`,
+        content: `You answer questions,
+        context\`\`\
+        Model knowledge: ${conversationMemory}`,
         role: RoleConstants.SYSTEM
       },
       {
